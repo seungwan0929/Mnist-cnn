@@ -33,11 +33,3 @@ for epoch in range(epochs):
 
 torch.save(model.state_dict(), 'mnist_cnn.pth')
 
-model.eval()
-with torch.no_grad():
-    images, labels = next(iter(test_loader))  # 한 배치 가져오기
-    img = images[0]  # 첫 이미지
-    label = labels[0]
-    output = model(img.unsqueeze(0).to(device))
-    pred = torch.argmax(output, 1)
-    print("Predicted:", pred.item())
