@@ -3,10 +3,11 @@ import torch.nn as nn
 import torch.optim as optim
 
 from model import CNNModel
-from data_loader import train_loader
-from data_loader import test_loader
+from data_loader import get_loader
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+train_loader, test_loader = get_loader()
 
 model = CNNModel().to(device)
 criterion = nn.CrossEntropyLoss()

@@ -1,9 +1,11 @@
 import torch
 from model import CNNModel
-from data_loader import test_loader
+from data_loader import get_loader
 import matplotlib.pyplot as plt
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+_, test_loader = get_loader()
 
 model = CNNModel().to(device)
 model.load_state_dict(torch.load('mnist_cnn.pth'))
