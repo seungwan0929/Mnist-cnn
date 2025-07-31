@@ -33,6 +33,6 @@ python eval.py
 
 **참고사항**
 
-학습된 모델은 mnist_cnn.pth로 저장.
+학습된 모델은 weights/mnist_cnn.pth로 저장.
 
 eval.py에서는 저장된 모델을 불러와 테스트셋의 예측 결과를 출력.
