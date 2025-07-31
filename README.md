@@ -8,9 +8,19 @@ train.py를 통해 학습을 수행하고, eval.py를 통해 학습된 모델의
 
 model.py, data_loader.py는 각각 모델의 정의와 데이터 로더를 구성. 
 
-**INSTALATION**
 
-pip install -r requirements.txt
+**기본 환경 CUDA:11.8 / Windows 11**
+
+1. conda create -n torch_env python=3.10 -y
+
+2. conda activate torch_env
+
+3. conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+4. conda install matplotlib pandas numpy
+
+5. pip install -r requirements.txt
+
 
 **train**
 
@@ -20,13 +30,6 @@ python train.py
 
 python eval.py
 
-**환경**
-
-Python 3.8 이상
-
-PyTorch 2.0 이상
-
-torchvision 0.15 이상 
 
 **참고사항**
 
