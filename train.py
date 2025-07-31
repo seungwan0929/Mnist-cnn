@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-from model import CNNModel
+from model.model import CNNModel
 from data_loader import get_loader
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -32,5 +32,6 @@ for epoch in range(epochs):
             print(f'Epoch [{epoch+1}/{epochs}], Step [{i}/{len(train_loader)}], Loss: {loss.item():.4f}')
 
 
-torch.save(model.state_dict(), 'mnist_cnn.pth')
+torch.save(model.state_dict(), 'weights/mnist_cnn.pth')
+
 
