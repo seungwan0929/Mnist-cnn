@@ -6,7 +6,8 @@ PyTorch 기반으로 구현된 간단한 MNIST 숫자 분류 CNN 모델.
 
 train.py를 통해 학습을 수행하고, eval.py를 통해 학습된 모델의 성능을 평가.
 
-model.py, data_loader.py는 각각 모델의 정의와 데이터 로더를 구성. 
+modes/model.py, data_loader.py는 각각 모델의 정의와 데이터 로더를 구성. 
+
 
 
 **기본 환경 CUDA:11.8 / Windows 11**
@@ -22,6 +23,7 @@ model.py, data_loader.py는 각각 모델의 정의와 데이터 로더를 구�
 5. pip install -r requirements.txt
 
 
+
 **train**
 
 python train.py
@@ -29,6 +31,7 @@ python train.py
 **evaluate**
 
 python eval.py
+
 
 
 **참고사항**
